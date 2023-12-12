@@ -1,26 +1,27 @@
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css");
-.calificacion input{
-    position: relative;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+
+.calificacion-estrellas{
+    transform: rotateY(180deg);
+}
+
+input{
+    display:none;
+}
+.calificacion-estrellas label{
+    display: inline-block;
+    color: #aaa;
+    font-size:25px;
     cursor: pointer;
-    appearance: none;
-    -webkit-appearance: none;
+    transition: all 0.3s;
 }
 
-.calificacion input ~ i{
-    font-size: 20px;
-    color:#111;
-    transition: .5s;
-    cursor: pointer;
+
+label:not(:last:child){
+    margin-right: 5px;
 }
 
-.calificacion input:hover ~ i
-.calificacion input:cheked ~ i{
-    color:gold;
-    
-}
 
+input:checked ~ label,
+input:hover ~ label{
+    color: gold;
+}
